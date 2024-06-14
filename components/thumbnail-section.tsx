@@ -5,7 +5,7 @@ import { Typewriter } from 'nextjs-simple-typewriter'
 export const ThumbnailSection = () => {
     
     return(
-        <div className="flex flex-col items-center justify-center full h-auto md:h-auto pt-[80px] md:pt-[150px] w-screen bg-[#D3DED4]">
+        <div id="home-section" className="flex flex-col items-center justify-center full h-auto md:h-auto pt-[80px] md:pt-[150px] w-screen bg-[#D3DED4]">
             <div className="bg-[#D3DED4] flex flex-col max-w-7xl items-center justify-around h-auto">
                 <div className="flex flex-col justify-center items-center md:flex-row pointer-events-none">
                     <Image priority={true} width="50" height="50" src="/svg-files/thumbnail.svg" alt="main-illustration" className="hidden md:flex w-[200px] md:w-[400px] h-auto p-2 md:p-10 select-none pointer-events-none" />

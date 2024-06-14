@@ -17,7 +17,7 @@ export const Welcome = () => {
     const {isOpen: isOpen3, onOpen: onOpen3, onOpenChange: onOpenChange3} = useDisclosure();
 
     return(
-        <div className="flex flex-col justify-center items-center w-screen h-auto bg-[#E5EBE5] z-0 pt-10 bg-gradient-to-b from-[#E5EBE5] to-[#D3DED4]">
+        <div id="welcome-section" className="flex flex-col justify-center items-center w-screen h-auto bg-[#E5EBE5] z-0 pt-10 bg-gradient-to-b from-[#E5EBE5] to-[#D3DED4]">
             <div className="flex flex-col justify-center items-center max-w-7xl space-y-10 pb-10">
                 <div className="text-[#4A5759] font-['Cabin'] font-semibold text-5xl md:text-6xl w-11/12 text-center mb-5">Welcome To CITTAA</div>
                 <div className="flex flex-row justify-center items-center md:items-start md:justify-between w-[90%] md:w-[90%] lg:w-full rounded-tl-[37px] rounded-bl-[37px] rounded-tr-[37px] md:rounded-tr-none rounded-br-[37px] border-5 border-[#97AA98] bg-[#B0C4B1] px-7 pt-7 pb-0 relative">

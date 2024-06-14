@@ -19,7 +19,7 @@ import {
 
 export const Reviews = () => {
     return(
-        <div className="flex flex-col justify-center items-center w-screen h-auto bg-[#90A297] pt-0">
+        <div id="review-section" className="flex flex-col justify-center items-center w-screen h-auto bg-[#90A297] pt-0">
             <div className="flex flex-col justify-center items-center w-screen md:pt-5 md:pl-10 md:pr-10 max-w-7xl space-y-5 pt-5">
                 <div className="flex flex-row justify-center items-center text-3xl md:text-6xl text-[#4A5759] w-4/5 font-semibold font-['Cabin']">Reviews</div>
                 <div className="flex flex-row justify-center items-center w-full md:w-auto">

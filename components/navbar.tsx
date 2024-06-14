@@ -15,6 +15,14 @@ import classNames from 'classnames';
 export const Navbar = () => {
     const [isShadowed, setIsShadowed] = useState(false);
 
+    const scrollToSection = (sectionId: string) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            const offsetTop = section.offsetTop - 100;
+            window.scrollTo({top:offsetTop, behavior: 'smooth'})
+        }
+    };
+
     useEffect(() => {
             const handleScroll = () => {
             if (window.scrollY > 50) {
@@ -37,15 +45,15 @@ export const Navbar = () => {
                 <Image priority={true} width="100" height="100" src="/svg-files/logo.svg" alt="logo" className="fill-[#4A5759] w-auto h-auto select-none pointer-events-none" />
                 <div className="flex flex-row justify-center items-center z-10">
                     <div className="hidden md:flex h-5 items-center space-x-4 text-sm mx-10 z-10">
-                        <div className="w-15 text-[#4A5759] text-lg hover:font-bold hover:drop-shadow-lg select-none">About</div>
+                        <div onClick={() => scrollToSection('about-section')} className="w-15 text-[#4A5759] text-lg hover:font-bold hover:drop-shadow-lg select-none">About</div>
                         <Separator orientation="vertical" />
-                        <div className="w-15 text-lg text-[#4A5759] hover:font-bold flex flex-row items-center justify-center select-none">Reviews</div>
+                        <div onClick={() => scrollToSection('review-section')} className="w-15 text-lg text-[#4A5759] hover:font-bold flex flex-row items-center justify-center select-none">Reviews</div>
                         <Separator orientation="vertical" />
-                        <div className="w-15 text-lg text-white hover:font-bold flex flex-row items-center justify-center select-none">Services</div>
+                        <div onClick={() => scrollToSection('welcome-section')} className="w-15 text-lg text-white hover:font-bold flex flex-row items-center justify-center select-none">Services</div>
                         <Separator orientation="vertical" />
-                        <div className="w-15 text-lg text-white hover:font-bold flex flex-row items-center justify-center select-none">FAQs</div>
+                        <div onClick={() => scrollToSection('faq-section')} className="w-15 text-lg text-white hover:font-bold flex flex-row items-center justify-center select-none">FAQs</div>
                         <Separator orientation="vertical" />
-                        <div className="w-15 text-lg text-white hover:font-bold flex flex-row items-center justify-center select-none">Contact</div>
+                        <div onClick={() => scrollToSection('contact-section')} className="w-15 text-lg text-white hover:font-bold flex flex-row items-center justify-center select-none">Contact</div>
                     </div>
 
                     <Image priority={true} width="50" height="50" src="/svg-files/frame69.svg" alt="leaves" className="hidden md:flex w-[400px] h-auto absolute -top-6 -right-28 z-0 select-none pointer-events-none drop-shadow-2xl transition-all ease-in-out duration-300" />
@@ -60,15 +68,15 @@ export const Navbar = () => {
                       </SheetDescription>
                       </SheetHeader>
                       <div className="grid gap-3 py-1 my-10">
-                        <div className="h-8 flex flex-row p-5 items-center rounded-md hover:bg-[#C7D1CB]">About</div>
+                        <div onClick={() => scrollToSection('about-section')} className="h-8 flex flex-row p-5 items-center rounded-md hover:bg-[#C7D1CB]">About</div>
                         <Separator/>
-                        <div className="h-8 flex flex-row p-5 items-center rounded-md hover:bg-[#C7D1CB]">Reviews</div>
+                        <div onClick={() => scrollToSection('review-section')} className="h-8 flex flex-row p-5 items-center rounded-md hover:bg-[#C7D1CB]">Reviews</div>
                         <Separator/>
-                        <div className="h-8 flex flex-row p-5 items-center rounded-md hover:bg-[#C7D1CB]">Services</div>
+                        <div onClick={() => scrollToSection('welcome-section')} className="h-8 flex flex-row p-5 items-center rounded-md hover:bg-[#C7D1CB]">Services</div>
                         <Separator/>
-                        <div className="h-8 flex flex-row p-5 items-center rounded-md hover:bg-[#C7D1CB]">Contact</div>
+                        <div onClick={() => scrollToSection('contact-section')} className="h-8 flex flex-row p-5 items-center rounded-md hover:bg-[#C7D1CB]">Contact</div>
                         <Separator/>
-                        <div className="h-8 flex flex-row p-5 items-center rounded-md hover:bg-[#C7D1CB]">FAQs</div>
+                        <div onClick={() => scrollToSection('faq-section')} className="h-8 flex flex-row p-5 items-center rounded-md hover:bg-[#C7D1CB]">FAQs</div>
                       </div>
                       </SheetContent>
                     </Sheet>

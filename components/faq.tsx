@@ -9,7 +9,7 @@ import {
 
 export const FAQ = () => {
     return(
-        <div className="flex flex-col justify-center items-center w-screen h-auto bg-[#E5EBE5] pb-20">
+        <div id="faq-section" className="flex flex-col justify-center items-center w-screen h-auto bg-[#E5EBE5] pb-20">
             <div className="flex flex-col justify-center items-center w-screen p-1 md:p-5 max-w-7xl space-y-10">
                 <div className="flex flex-row justify-center items-center text-3xl md:text-6xl text-[#4A5759] w-4/5 font-semibold font-['Cabin]">FAQs</div>
                 <Accordion className="w-4/5 flex flex-col space-4-5" type="single" collapsible>
